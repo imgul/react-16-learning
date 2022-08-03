@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
+function IncrementNumber(props) {
+  return <input type="button" value={props.value} />
+}
+
+function CounterElem(props) {
+  return <div className='number-counter'>{props.value}</div>
+}
+
+
+
 function App() {
+  const buttonElem = <IncrementNumber value="Increase" />;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CounterElem value={0} />
+      {buttonElem}
     </div>
   );
 }
