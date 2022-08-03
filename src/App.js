@@ -4,11 +4,15 @@ import './App.css';
 
 class Welcome extends Component {
   state = {
-    name: "Gulzaib"
+    counter: 0
   }
+
   render() {
     return (
-      <div>Welcome {this.state.name}</div>
+      <div>
+        <p>{this.state.counter}</p>
+        <button>Increment</button>
+      </div>
     )
   }
 }
