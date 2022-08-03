@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import './App.css';
 
 function IncrementNumber(props) {
@@ -9,6 +10,17 @@ function CounterElem(props) {
 }
 
 
+class Welcome extends Component {
+  state = {
+    name: "Gulzaib"
+  }
+  render() {
+    return (
+      <div>Welcome {this.state.name}</div>
+    )
+  }
+}
+
 
 function App() {
   const buttonElem = <IncrementNumber value="Increase" />;
@@ -16,6 +28,7 @@ function App() {
     <div className="App">
       <CounterElem value={0} />
       {buttonElem}
+      <Welcome />
     </div>
   );
 }
